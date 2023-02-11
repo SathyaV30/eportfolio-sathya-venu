@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://kit.fontawesome.com/963704ede8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Personal Website</title>
+
+  <body>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="box">
+      <h1></h1>
+      <h5></h5>
+      <p></p>
+      
+      <ul>
+        <li><a href="https://www.linkedin.com/in/sathya-venugopal30/" target="_blank"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="https://github.com/SathyaV30" target ="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+        <li><a href="mailto: sathya.venugopal2003@gmail.com@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+      </ul>
+      
+    </div>
+    <section id="languages">
+        <div class="container">
+          <div class="row">
+            <h1 class="section__title">Here is my technology stack </h1>
+            <div class="language__list">
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                    alt="Html Logo" class="language__img" />
+                </figure>
+                <span class="language__name">HTML</span>
+              </div>
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="CSS Logo"
+                    class="language__img" />
+                </figure>
+                <span class="language__name">CSS</span>
+              </div>
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="JavaScript Logo"
+                    class="language__img" />
+                </figure>
+                <span class="language__name">JavaScript</span>
+              </div>
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img src="https://cdn.iconscout.com/icon/free/png-256/typescript-3521774-2945272.png"
+                    alt="TypeScript Logo" class="language__img" />
+                </figure>
+                <span class="language__name">TypeScript</span>
+              </div>
+              
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="React Logo"
+                    class="language__img" />
+                </figure>
+                <span class="language__name">React</span>
+              </div>
+
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img src="c.png" alt="C Logo"
+                    class="language__img" />
+                </figure>
+                <span class="language__name">C</span>
+              </div>
+
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img src="https://cdn.iconscout.com/icon/free/png-256/java-2038875-1720088.png" alt="Java Logo"
+                    class="language__img" />
+                </figure>
+                <span class="language__name">Java</span>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </section>
+      
+  </body>
+  <script>
+    const typedTextH = "Hi, i'm Sathya...";
+    const typedTextP = "I am a highly motivated Software Engineer, dedicated to continuously improving my skills through practical learning and hands-on development work."
+    const typedTextH5 = "Software Engineer"
+    let indexH = 0;
+    let indexP = 0
+    let indexH5 = 0;
+  
+    function typeH() {
+      if (indexH < typedTextH.length) {
+        document.querySelector("h1").textContent += typedTextH.charAt(indexH);
+        indexH++;
+        setTimeout(typeH, 100);
+      }
+    }
+    function typeH5() {
+        if (indexH5 < typedTextH5.length) {
+        document.querySelector("h5").textContent += typedTextH5.charAt(indexH5);
+        indexH++;
+        setTimeout(typeH, 100);
+      }
+
+    }
+
+    function typeP() {
+      if (indexP < typedTextP.length) {
+        document.querySelector("p").textContent += typedTextP.charAt(indexP);
+        indexP++;
+        setTimeout(typeP, 25);
+      }
+      
+    }
+  
+    document.addEventListener("DOMContentLoaded",  function() {
+      typeH()
+      setTimeout(typeH,2000);
+      setTimeout(typeP,2000);
+      setTimeout(function() {
+        let listItems = document.querySelectorAll("ul li");
+        let delay = 0;
+        listItems.forEach(function(item) {
+        setTimeout(function() {
+            item.style.opacity = 1;
+            item.style.transition = "opacity 2s";
+        }, delay);
+        delay += 200;
+        });
+    }, 6500);
+
+    setTimeout(function() {
+        let item = document.querySelector(".container") 
+        item.style.opacity = 1;
+        item.style.transition = "opacity 2s";
+        
+    }, 7500)
+
+    }
+    );
+
+   
+
+  </script>
+  
+</head>
+</html>
