@@ -37,12 +37,11 @@ body{
   }
   .box h1{
     font-size: 40px;
-    letter-spacing: 4px;
     font-weight: 100;
   }
   .box h5{
     font-size: 20px;
-    letter-spacing: 3px;
+ 
     font-weight: 100;
   }
   .box p{
@@ -65,7 +64,7 @@ body{
     opacity: 0;
     
   }
-  .box li a i, .project a i{
+  .box li a i, .project a i, .up a i {
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 60px;
@@ -73,41 +72,59 @@ body{
 
   }
 
-  .box li a i:hover, .project a i:hover{
+  .tp {
+    font-size: 30px;
+  }
+
+  .box li a i:hover, .project a i:hover,.up a i:hover{
     color: #c2c2c2;
   }
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.4);
-    height: 60px;
-    color: white;
-    padding: 0 40px;
-    font-family: sans-serif;
-    font-weight: lighter;
-  }
-  
-  .navbar a {
-    color: white;
-    text-decoration: none;
+  .nav-link {
+    font-weight: 100;
     font-size: 20px;
-    margin: 0 20px;
-    transition: all ease-in-out 250ms;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 20px 0px;
+    margin: 0px 20px;
+    display: inline-block;
+    position: relative;
+    opacity: 0.75;
   }
   
-  .navbar a:hover {
-    color: #b9b9b9;
+  .nav-link:hover {
+    transition: 150ms;
+    opacity: 1;
   }
+  
+  .nav-link::before {
+    transition: 150ms;
+    height: 1px;
+    content: "";
+    position: absolute;
+    background-color:#ffffff;
+  }
+  
+  .nav-link-ltr::before {
+    width: 0%;
+    bottom: 10px;
+  }
+  
+  .nav-link-ltr:hover::before {
+    width: 100%;
+  }
+  
   
   .navbar .logo {
     font-weight: bold;
     font-size: 25px;
   }
   
-  .navbar .menu {
+  .navbar{
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.4);
+
   }
   section:nth-child(even) {
     background-color: #f8f8f8;
@@ -177,9 +194,9 @@ body{
   .outer-p {
     /* background:rgba(0, 0, 0, 0.4); */
     margin-top: 10px;
-    animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    opacity:0;
 
   }
   
@@ -255,7 +272,7 @@ body{
     /* background: rgba(0, 0, 0, 0.4); */
     text-align: center;
     font-size: 23px;
-    letter-spacing: 3px;
+
     font-weight: 100;
 
 
@@ -264,6 +281,36 @@ body{
   .project-img {
     max-width: 300px;
   }
+
+  .end {
+    height:220px;
+    width:100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .up,.proj,.prof,.info {
+    width:25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    place-items: center;
+    background-color:rgba(0, 0, 0, 0.4);
+
+  }
+
+  .up {
+    justify-content: start;
+  }
+
+  .prof a i:hover, .proj a:hover,.info a:hover, .info a i:hover {
+    color: #c2c2c2;
+    transition: all ease-in-out 250ms;
+  }
+
+
+
 
   
 

@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="styles.css">
     <title>Personal Website</title>
 
-  <body>
+  <body id ="bd">
     <nav class="navbar">
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="resume.html">Resume</a>
-      <a href="contact.html">Contact</a>
+      <a class ="nav-link nav-link-ltr" href="index.html">Home</a>
+      <a class ="nav-link nav-link-ltr" onClick="document.getElementById('project-sec').scrollIntoView({ behavior: 'smooth', block: 'start' });"> Projects</a>
+      <a class ="nav-link nav-link-ltr" href="Sathya-Venugopal-Resume-Feb-2023.pdf" target = "blank">Resume</a>
+      <a class ="nav-link nav-link-ltr" href="mailto: sathya.venugopal2003@gmail.com@gmail.com" target="_blank"">Contact</a>
     </nav>
     <div class="box">
       <h1></h1>
@@ -88,7 +88,83 @@
           </div>
         </div>
       </section>
-      
+   
+      <div class = "outer-p" id ="project-sec">
+        <div class = "projects-header"> 
+        <h2>Projects</h2>
+        <p>Here are some of my recent projects:</p>
+      </div>
+        <div class = "projects">
+       
+        <div class="project">
+            <h3>NBA Stats App</h3>
+            <img src = "nba-stats.png" class = "project-img">
+            <p>An interactive web application that showcases statistics for both current and former NBA players. It includes features such as the ability to add favorite players, compare players, generate random players, and view a detailed player profile.</p>
+            <p>Technologies used: ReactJS, JavaScript, HTML, CSS</p>
+            <div style="display: flex;flex-direction: row; justify-content: center;">
+             <a href="https://nba-player-stats.netlify.app" target = "_blank" style="margin-right: 30px;"><i class="fa fa-external-link-alt"></i></a></li>
+             <a href="https://github.com/SathyaV30/nba-player-stats" target = "_blank" style="margin-right: 30px;""><i class="fa-brands fa-github"></i></a></li>
+              </div>
+        </div>
+    
+        <div class="project">
+            <h3>Random Color Generator</h3>
+            <img src = "rcg.png" class = "project-img">
+            <p>A user-friendly web app was created that generates random colors as requested by the user. The app features a visual representation of the generated color, along with its hexadecimal value and a descriptive name in English.</p>
+            <p>Technologies used: JavaScript, HTML, CSS</p>
+            <div style="display: flex;flex-direction: row; justify-content: center;">
+            <a href ="https://rand-color-generator101.netlify.app" target = "_blank" style="margin-right: 30px;"><i class="fa fa-external-link-alt"></i></a></li>
+            <a href="https://github.com/SathyaV30/random-color-generator" target = "_blank" style="margin-right: 30px;""><i class="fa-brands fa-github"></i></a></li>
+          </div>
+    
+        </div>
+    </div>
+
+      <div class ="end">
+
+
+      <div class ="up">
+        <h3 style="font-size: 24px;">Back to Top</h3>
+         <a onClick="document.getElementById('bd').scrollIntoView({ behavior: 'smooth', block: 'start' })" class ="tp"><i class="fa-solid fa-arrow-up fa-3x"></i></a>
+
+      </div>
+
+      <div class= "proj">
+        <h3 style="font-size: 24px;">Projects</h3>
+        <a style ="text-decoration: none;
+                    margin-bottom: 30px;" href="https://nba-player-stats.netlify.app" target = _blank >Nba Stats App</a>
+        <a style ="text-decoration: none;
+                    margin-bottom: 30px;" href ="https://rand-color-generator101.netlify.app" target = _blank">Random Color Generator</a>
+
+
+
+      </div>
+
+      <div class ="prof">
+        <h3 style="font-size: 24px;">Profiles</h3>
+        <a style ="margin-bottom: 30px;" href ="https://www.linkedin.com/in/sathya-venugopal30/" target="_blank"><i class="fa-brands fa-linkedin fa-3x" aria-hidden="true"></i></a>
+        <a style ="margin-bottom: 30px" href= "https://github.com/SathyaV30" target ="_blank"><i class="fa-brands fa-github fa-3x" aria-hidden="true"></i></a>
+
+
+      </div>
+
+
+      <div class ="info">
+        <h3 style="font-size: 24px;">Information</h3>
+       <p style = "margin-top: 5px;"><i class="fa-solid fa-location-dot"> </i> Pleasanton, California</p>
+       <a style ="text-decoration: none; margin-top: 5px;" href="mailto: sathya.venugopal2003@gmail.com@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i> sathya.venugopal2003@gmail.com</a>
+       <a style = "margin-top:20px; text-decoration: none;" href = "Sathya-Venugopal-Resume-Feb-2023.pdf" target="_blank"><i class="fa-regular fa-file-lines" aria-hidden="true"></i> Resume</a>
+      </div>
+
+
+
+
+
+    </div>
+
+
+  </div>
+
   </body>
   <script>
     const typedTextH = "Hi, i'm Sathya...";
@@ -145,6 +221,13 @@
         item.style.transition = "opacity 2s";
         
     }, 7500)
+
+    setTimeout(function() {
+        let item = document.querySelector(".outer-p") 
+        item.style.opacity = 1;
+        item.style.transition = "opacity 2s";
+        
+    }, 8500)
 
     }
     );
