@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background: url(bg.jpg) no-repeat center center fixed; 
+    background: url(./img&resume/bg.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -288,6 +288,7 @@ body{
     background: rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: space-evenly;
+    overflow:hidden;
   }
 
   .up,.proj,.prof,.info {
@@ -297,6 +298,7 @@ body{
     justify-content: start;
     place-items: center;
     background-color:rgba(0, 0, 0, 0.4);
+    overflow: hidden;
 
   }
 
